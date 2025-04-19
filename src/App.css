@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+img{
+  width: 100%;
+  transition: all 0.3s ease-in;
+}
+body::selection{
+  color: chocolate;
+  background-color: rgb(236, 255, 112);
+}
+
+.h-50{
+  background-image: url('../src/Images/3d-set-of-cinema-movie-theatre-video-and-audio-icons-trendy-glossy-plastic-design-elements-high-quality-isolated-render-free-png.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 300px !important;
+  overflow: hidden;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+h2:hover{
+  color: white !important;
+}
+.card-img{
+  overflow: hidden;
+}
+.cardo:hover img{
+  transform: scale(1.1);
+}

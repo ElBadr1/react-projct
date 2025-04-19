@@ -1,0 +1,15 @@
+.pass{
+    background-color: aqua;
+}
+.name{
+    background-color: bisque;
+}
+.num{
+    background-color: rgb(255, 0, 0);
+}
+.email{
+    background-color: rgb(0, 255, 21);
+}
+.email:focus{
+    background-color: tomato;
+}
