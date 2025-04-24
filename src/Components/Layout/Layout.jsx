@@ -22,12 +22,12 @@ export default function Layout() {
         <h1 className="">
           <Input type= 'number' name= 'userNumber' placeholder= 'Please, Enter Your Number' style={style.num}/>
           <Input type= 'text' name= 'userName' placeholder= 'Please, Enter Your Name' style={style.name}/>
-          <Input type= 'email' name= 'useremail' placeholder= 'Please, Enter Your Email' style={style.email}/>
-          <Input type= 'password' name= 'userpassword' placeholder= 'Please, Enter Your Password' style={style.pass}/>
+          <Input type= 'email' name= 'userEmail' placeholder= 'Please, Enter Your Email' style={style.email}/>
+          <Input type= 'password' name= 'userPassword' placeholder= 'Please, Enter Your Password' style={style.pass}/>
         </h1>
       </Online>
       <Offline>
-        <h1 className="">"OPPS YOU ARE Offline"</h1>
+        <h1 className="">"OPS YOU ARE Offline"</h1>
       </Offline> */}
     </>
   );

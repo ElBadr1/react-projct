@@ -4,15 +4,15 @@ import Card from "../Card/Card";
 import { Helmet } from "react-helmet";
 
 export default function Movie() {
-  const [data, setdata] = useState([]);
-  const [type, settype] = useState("day");
+  const [data, setData] = useState([]);
+  const [type, seType] = useState("day");
   useEffect(() => {
     axios
       .get(
         `https://api.themoviedb.org/3/trending/movie/${type}?api_key=8494c70d32335f06e505959598e8ff8c`
       )
       .then((response) => {
-        setdata(response.data.results);
+        setData(response.data.results);
         console.log(response.data);
       });
   }, [type]);
@@ -31,7 +31,7 @@ export default function Movie() {
           <h2
             className="col-md-3 text-danger btn btn-outline-danger"
             onClick={() => {
-              settype("day");
+              seType("day");
             }}
           >
             Trending Day
@@ -39,7 +39,7 @@ export default function Movie() {
           <h2
             className="col-md-3 text-danger btn btn-outline-danger"
             onClick={() => {
-              settype("week");
+              seType("week");
             }}
           >
             Trending Week

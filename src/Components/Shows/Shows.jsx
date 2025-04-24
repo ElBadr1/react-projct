@@ -5,16 +5,16 @@ import Movie from "./Movie/Movie";
 import { Outlet } from "react-router-dom";
 
 export default function Shows() {
-  const [data, setdata] = useState([]);
-  // const BASE_URL = "https://image.tmdb.org/t/p/w500"; //MACRO IF I need to make a constant value to use it in all projct make it UPPER CASE
-  const [type, settype] = useState("movie");
+  const [data, setData] = useState([]);
+  // const BASE_URL = "https://image.tmdb.org/t/p/w500"; //MACRO IF I need to make a constant value to use it in all project make it UPPER CASE
+  const [type, setType] = useState("movie");
   useEffect(() => {
     axios
       .get(
         `https://api.themoviedb.org/3/trending/${type}/day?api_key=8494c70d32335f06e505959598e8ff8c`
       )
       .then((response) => {
-        setdata(response.data.results);
+        setData(response.data.results);
         console.log(response.data);
       });
   }, [type]);
@@ -24,7 +24,7 @@ export default function Shows() {
   //         <h2
   //           className="col-md-3 text-danger btn btn-outline-danger"
   //           onClick={() => {
-  //             settype("movie");
+  //             setType("movie");
   //           }}
   //         >
   //           Movies
@@ -32,7 +32,7 @@ export default function Shows() {
   //         <h2
   //           className="col-md-3 text-danger btn btn-outline-danger"
   //           onClick={() => {
-  //             settype("tv");
+  //             setType("tv");
   //           }}
   //         >
   //           TV
@@ -69,7 +69,7 @@ export default function Shows() {
   //         <h2
   //           className="col-md-3 text-danger btn btn-outline-danger"
   //           onClick={() => {
-  //             settype("movie");
+  //             setType("movie");
   //           }}
   //         >
   //           Movies
@@ -77,7 +77,7 @@ export default function Shows() {
   //         <h2
   //           className="col-md-3 text-danger btn btn-outline-danger"
   //           onClick={() => {
-  //             settype("tv");
+  //             setType("tv");
   //           }}
   //         >
   //           TV
@@ -122,7 +122,7 @@ export default function Shows() {
           <h2
             className="col-md-3 text-danger btn btn-outline-danger"
             onClick={() => {
-              settype("movie");
+              setType("movie");
             }}
           >
             Movies
@@ -130,7 +130,7 @@ export default function Shows() {
           <h2
             className="col-md-3 text-danger btn btn-outline-danger"
             onClick={() => {
-              settype("tv");
+              setType("tv");
             }}
           >
             TV
@@ -191,8 +191,7 @@ export default function Shows() {
             })}
         </div>
       </div>
-    {/* <Outlet></Outlet> */}
-
+      {/* <Outlet></Outlet> */}
     </>
   );
 }
