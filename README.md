@@ -1,3 +1,3 @@
 # react-projct
- my first react project
-Movie - APP
+ my first react project : 
+The Movie - APP
